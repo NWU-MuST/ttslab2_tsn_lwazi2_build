@@ -18,7 +18,7 @@ RUN apt-get install -y --force-yes cmake cython python-numpy #Required to build 
 RUN apt-get install -y --force-yes python-cffi python-dateutil python-scipy python-sklearn python-pyicu #Required by TTSLab
 #RUN apt-get install -y --force-yes libncurses5-dev #Required by EST
 RUN apt-get install -y --force-yes python-setuptools swig #Required to build Sequitur
-RUN apt-get install -y --force-yes bc sox normalize-audio tcl-snack praat #Required tools for voice build scripts
+RUN apt-get install -y --force-yes bc sox normalize-audio tcl-snack #Required tools for voice build scripts
 
 
 ## SETUP USER, LOCAL SOURCE, AND DATA
@@ -78,6 +78,15 @@ WORKDIR $USERHOME/src/g2p
 RUN python setup.py install --prefix=$USERHOME/local
 WORKDIR $USERHOME/local/lib/python2.7/site-packages
 RUN ln -s $USERHOME/src/g2p/sequitur_.py
+
+## Fetch and build Praat
+WORKDIR $USERHOME/src
+RUN git clone https://github.com/praat/praat.git
+WORKDIR $USERHOME/src/praat
+RUN cp makefiles/makefile.defs.linux.barren ./makefile.defs
+RUN make
+WORKDIR $USERHOME/local/bin
+RUN ln -s $USERHOME/src/praat/praat
 
 ## Fetch, build and setup TTSLab and tools
 WORKDIR $USERHOME/src
