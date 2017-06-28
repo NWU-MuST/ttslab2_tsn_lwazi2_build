@@ -13,7 +13,7 @@ G2P_JSM=$TTSLAB_PATH/ttslab/g2p_jsm.py
 SEQUITUR=g2p.py
 
 #Vars:
-N=4 #DEMIT
+N=7
 
 #Inputs
 SOURCE_DICT_FULL=$PRONUN_DIR/main.pronundict
