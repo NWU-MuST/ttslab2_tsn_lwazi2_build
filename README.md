@@ -63,14 +63,14 @@ The source code for the following third-party tools are required but are not inc
 }
 ```
 
- 2. D.R. van Niekerk, __"Final Report: Rapid development of increasingly natural sounding speech synthesis for South African languages,"__ North-West University, Vanderbijlpark, South Africa, Tech. Rep. _Forthcoming._
+ 2. D.R. van Niekerk, __"Final technical report: Rapid development of increasingly natural sounding speech synthesis for South African languages,"__ North-West University, Vanderbijlpark, South Africa, Tech. Rep. 2017.
 ```bibtex
 @techreport{vniekerk2017ntts,
-	title = {{Final Report: Rapid development of increasingly natural sounding speech synthesis for South African languages}},
+	title = {{Final technical report: Rapid development of increasingly natural sounding speech synthesis for South African languages}},
 	author = {van Niekerk, D. R.},
 	institution = {{North-West University}},
 	address = {Vanderbijlpark, South Africa},
-	year = {forthcoming},
+	year = {2017},
 }
 ```
 
@@ -102,8 +102,8 @@ The source code for the following third-party tools are required but are not inc
 ```
  
 
-[1]: https://github.com/demitasse/ttslab2
-[2]: https://github.com/demitasse/ttslabdev2
+[1]: https://github.com/NWU-MuST/ttslab2
+[2]: https://github.com/NWU-MuST/ttslabdev2
 [3]: https://www.docker.com/
 [4]: https://creativecommons.org/licenses/by-nc-nd/3.0/
 [5]: https://github.com/NWU-MuST/za_lex/tree/master/data/tsn
